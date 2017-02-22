@@ -1,0 +1,59 @@
+/* Extra Styles Added To Upward Plus+ CRM & Marketing Automation Suite */
+
+#topbar {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 35px;
+	z-index: 1000;
+	background-color: #f9f9f9;
+}
+
+#header {
+	top: 35px !important;
+	padding-top: 10px;
+}
+
+#page {
+  margin-top: 77px !important;
+}
+
+#footer .footer-credits {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+
+#footer .footer-logo .credits img {
+  height: auto;
+  width: 1px;
+}
+
+#embed-row #embedcode {
+  width: 450px;
+}
+
+.x2-button.highlight,
+.ui-datepicker-buttonpane button.highlight,
+.x2-minimal-button.highlight,
+.ui-dialog .ui-dialog-buttonpane button.highlight {
+    background-color: #0aa834;
+    border-color: #808487;
+    color: #fff;
+}
+
+#code-output-1 #webformid {
+	font-size: 13px;
+	font-weight: bold;
+	background-color: transparent;
+	border: none;
+	margin-left: 10px;
+	width: 200px;
+}
+
+#code-output-2 #webformtoken {
+	font-size: 13px;
+	font-weight: bold;	
+	display: inline;
+	margin-left: 10px;
+}

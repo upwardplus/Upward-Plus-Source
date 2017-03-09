@@ -42,7 +42,7 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl.'/css/packa
 ?>
 
 <div class="page-title"><h2><?php 
-    echo Yii::t('admin', 'X2Packager');
+    echo Yii::t('admin', 'Packager');
 ?></h2></div>
 
 <div id='packager-form' class="form">

@@ -390,21 +390,12 @@ $userMenu = array(
     array(
         'label' => Yii::t('app', 'Admin'), 
         'url' => array('/admin/index'),
-        'active' => ($module == 'admin') ? true : null, 'visible' => $isAdmin,
+        'active' => ($module == 'admin') ? true : null,
+		'visible' => $isAdmin,
         'itemOptions' => array (
             'id' => 'admin-user-menu-link',
             'class' => 'user-menu-link ' . ($isAdmin ? 'x2-first' : '')
         )
-    ),
-    array(
-        'label' => Yii::t('app', 'Profile'), 
-        'url' => array('/profile/view',
-            'id' => Yii::app()->user->getId(),
-            'publicProfile'=>1),
-        'itemOptions' => array (
-            'id' => 'profile-user-menu-link',
-            'class' => 'user-menu-link ' . ($isAdmin ? '' : 'x2-first'),
-        ),
     ),
     array(
         'label' => Yii::t('app', 'Users'), 
@@ -413,56 +404,97 @@ $userMenu = array(
         'itemOptions' => array (
             'id' => 'admin-users-user-menu-link',
             'class' => 'user-menu-link',
-        ),
-    ),
+        )
+    ),	
+
+	/*
+	*****  REMOVED PERMANENTLY  *****
     array(
+        'label' => Yii::t('app', 'Profile'), 
+        'url' => array('/profile/view',
+            'id' => Yii::app()->user->getId(),
+            'publicProfile'=>1),
+        'itemOptions' => array (
+            'id' => 'profile-user-menu-link',
+            'class' => 'user-menu-link ' . ($isAdmin ? '' : 'x2-first'),
+			),
+		),  */
+		
+    /*
+	***** REMOVED PERMANENTLY  *****
+	array(
         'label' => Yii::t('app', 'Users'), 
         'url' => array('/profile/profiles'),
         'visible' => !$isAdmin && !$usersIndexAccess,
         'itemOptions' => array (
             'id' => 'non-admin-users-user-menu-link',
             'class' => 'user-menu-link',
-        ),
-    ),
+        )),*/
     array(
         'label' => $searchbarHtml, 'itemOptions' => array('id' => 'search-bar',
         'class' => 'special')),
-);
+    );
 $userMenuItems = array(
-    array(
+	array(
         'label' => Yii::t('app', 'Profile'), 'url' => array('/profile/view',
-            'id' => Yii::app()->user->getId(), 'publicProfile'=>1)),
+            'id' => Yii::app()->user->getId(), 'publicProfile'=>1)
+		),
     array(
         'label' => Yii::t('app', 'Notifications'),
-        'url' => array('/site/viewNotifications')),
-    array(
-        'label' => Yii::t('app', 'Preferences'),
-        'url' => array('/profile/settings')),
+        'url' => array('/site/viewNotifications')
+		),    
     array(
         'label' => Yii::t('profile', 'Manage Apps'),
-        'url' => array('/profile/manageCredentials')),
+        'url' => array('/profile/manageCredentials'),
+		'visible' => $isAdmin
+		),	
+    
+	/*  ***** ADD BACK LATER *****
+	array(
+        'label' => Yii::t('app','About'),
+        'url' => array('http://upwardplus.com','view'=>'about'),
+		'linkOptions' => array('target' => '_blank')
+		),
+		*/
+		
     array(
+        'label' => Yii::t('app', '---'),
+        'itemOptions' => array('class' => 'divider')
+		),	
+    array(
+        'label' => Yii::t('app', 'Settings'),
+        'url' => array('/profile/settings')
+		),	
+    array('label' => Yii::t('app', 'Logout'), 'url' => array('/site/logout'))	
+
+    /*
+	*****  REMOVED PERMANENTLY  *****
+	array(
         'label' => Yii::t('help', 'Icon Reference'), 'url' => array('/site/page',
-            'view' => 'iconreference')),
-    array(
+            'view' => 'iconreference')), */
+
+	/*
+	*****  ADD BACK LATER WITH LINK TO FAQ  *****
+	array(
         'label' => Yii::t('help', 'Help'),
         'url' => 
          
             Yii::app()->contEd ('pla') ? X2_PARTNER_HELP_LINK_URL :
          
             'http://www.x2crm.com/reference_guide',
-        'linkOptions' => array('target' => '_blank')),
-    array(
-        'label' => Yii::t('app','About'),
-        'url' => array('/site/page','view'=>'about'),
-    ),
-    array(
+        'linkOptions' => array('target' => '_blank')), */
+
+    
+	/*
+	*****  ADD BACK LATER WITH THE RIGHT URL  *****
+	array(
         'label' => Yii::t('app', 'Report A Bug'),
-        'url' => array('/site/bugReport')),
-    array(
-        'label' => Yii::t('app', '---'),
-        'itemOptions' => array('class' => 'divider')),
-    array(
+        'url' => array('/site/bugReport')), */
+
+    
+	/*
+	*****  REMOVED PERMANENTLY ****
+	array(
         'label' => Yii::app()->params->sessionStatus ? Yii::t('app', 'Go Invisible') : Yii::t('app', 'Go Visible'), 'url' => '#',
         'linkOptions' => array(
             'submit' => array(
@@ -470,8 +502,8 @@ $userMenuItems = array(
                 'redirect' => Yii::app()->request->requestUri),
             'csrf' => true,
             'confirm' => 'Are you sure you want to toggle your session status?',)
-    ),
-    array('label' => Yii::t('app', 'Logout'), 'url' => array('/site/logout'))
+    ), */
+
 );
 
 

@@ -57,3 +57,31 @@
 	display: inline;
 	margin-left: 10px;
 }
+
+form#inline-calendar-event-form .row.button-row,
+form#inline-action-form .row.button-row,
+form#inline-call-form .row.button-row,
+form#inline-note-form .row.button-row,
+form#inline-products-form .row.button-row,
+form#inline-time-form .row.button-row {
+  overflow: unset !important;
+}
+
+/************* START: HIDDEN NOW, BUT TO ADD BACK LATER  ****************/
+
+#up-about-button {
+  display: none;
+}
+
+
+/************* END: HIDDEN NOW, BUT TO ADD BACK LATER  ****************/
+/************* START: HIDDEN ITEMS  ****************/
+
+a#page-fader,
+button#toggle-location-button,
+button#toggle-location-comment-button {
+  display: none !important;
+}
+
+
+/************* END: HIDDEN ITEMS  ****************/

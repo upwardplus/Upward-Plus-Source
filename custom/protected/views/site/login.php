@@ -324,7 +324,7 @@ Yii::app()->clientScript->registerGeolocationScript();
                 </div>
                 <div id="login-version">
                     <a href='#' id='dark-theme-button' class='fa fa-adjust text-link'></a>
-                    <span>Upward Plus+ Version <?php echo Yii::app()->params->version; ?></span>
+                    <span>Upward Plus+ Version <?php echo Yii::app()->params->version; ?>.01</span><!-- Version .01  -->
                 </div>
                 <div style='display:none' class="row theme-selection">
                     <span class="switch" >

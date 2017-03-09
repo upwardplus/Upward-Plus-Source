@@ -71,7 +71,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
     <div class="form x2-layout-island license-info-section">
         <div class="row" style="margin-left: 0px;">
             <div class='cell span-10'>
-                <b>Upward Plus+ - Enterprise CRM for Small Business</b><br>
+                <b>Upward Plus+ - Small Business Accelerated</b><br>
             </div>
             <div class='cell span-9'>
                 <b><?php echo Yii::t('app', 'Version') . " " . Yii::app()->params->version; ?></b><br>
@@ -107,56 +107,55 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
 
         echo CHtml::link(Yii::t('admin', 'About Upward Plus+'),
                 'https://upwardplus.com',
-                array('class' => 'x2-button right'));
+                array('class' => 'x2-button right', 'id' => 'up-about-button'));
         ?>
     </div>
     <div class=" x2-layout-island" id="main-admin-panel" style="display:none;">
         <div id="tabs" class="form">
             <ul>
-                <li data-attr="tabs-1"><div id="admin-support"><a href="#tabs-1"><?php
-                            echo Yii::t('admin', 'Customer Support');
+                <li data-attr="tabs-10"><div id="admin-settings"><a href="#tabs-10"><?php
+                            echo Yii::t('admin', 'Settings');
                             ?></a></div></li>
-                <li data-attr="tabs-2"><div id="admin-doc-and-videos"> <a href="#tabs-2"><?php
-                            echo Yii::t('admin', 'Documentation & Videos');
+                <li data-attr="tabs-9"><div id="admin-x2studio"><a href="#tabs-9"><?php
+                            echo Yii::t('admin', 'Customization');
+                            ?></a></div></li>
+                <li data-attr="tabs-4"><div id="admin-ui-settings"><a href="#tabs-4"><?php
+                            echo Yii::t('admin', 'User Interface');
+                            ?></a></div></li>
+                <li data-attr="tabs-6"><div id="admin-workflow"><a href="#tabs-6"><?php
+                            echo Yii::t('admin', 'Automation Settings');
                             ?></a></div></li>
                 <li data-attr="tabs-3"><div id="admin-users"><a href="#tabs-3"><?php
                             echo Yii::t('admin', 'User Management');
                             ?></a></div></li>
-                <li data-attr="tabs-4"><div id="admin-ui-settings"><a href="#tabs-4"><?php
-                            echo Yii::t('admin', 'User Interface Settings');
-                            ?></a></div></li>
                 <li data-attr="tabs-5"><div id="admin-lead-capture"><a href="#tabs-5"><?php
-                            echo Yii::t('admin', 'Web Lead Capture and Routing');
-                            ?></a></div></li>
-                <li data-attr="tabs-6"><div id="admin-workflow"><a href="#tabs-6"><?php
-                            echo Yii::t('admin', 'Workflow & Process Tools');
+                            echo Yii::t('admin', 'Web Lead Settings');
                             ?></a></div></li>
                 <li data-attr="tabs-7"><div id="admin-email"><a href="#tabs-7"><?php
-                            echo Yii::t('admin',
-                                    'Email Configuration & Connectors');
-                            ?></a></div></li>
-                <li data-attr="tabs-8"><div id="admin-import-export"><a href="#tabs-8"><?php
-                            echo Yii::t('admin',
-                                    'Data Import & Export Utilities');
-                            ?></a></div></li>
-                <li data-attr="tabs-9"><div id="admin-x2studio"><a href="#tabs-9"><?php
-                            echo Yii::t('admin', 'Customization Tools');
-                            ?></a></div></li>
-                <li data-attr="tabs-10"><div id="admin-settings"><a href="#tabs-10"><?php
-                            echo Yii::t('admin', 'System Settings');
+                            echo Yii::t('admin', 'Email Settings');
                             ?></a></div></li>
                 <li data-attr="tabs-11"><div id="admin-security"><a href="#tabs-11"><?php
                             echo Yii::t('admin', 'Security Settings');
+                            ?></a></div></li>					
+                <li data-attr="tabs-8"><div id="admin-import-export"><a href="#tabs-8"><?php
+                            echo Yii::t('admin', 'Data Migration');
                             ?></a></div></li>
-				<!--				
-                <li data-attr="tabs-12"><div id="admin-hub"><a href="#tabs-12"><?php
+				<li data-attr="tabs-1"><div id="admin-support"><a href="#tabs-1"><?php
+                            echo Yii::t('admin', 'Help & Support');
+                            ?></a></div></li>
+				<!-- ADD BACK LATER -->
+                <li data-attr="tabs-2" style="display: none; "><div id="admin-doc-and-videos"> <a href="#tabs-2"><?php
+                            echo Yii::t('admin', 'Documentation & Videos');
+                            ?></a></div></li>
+				<!-- REMOVED PERMANENTLY -->
+                <li data-attr="tabs-12" style="display: none; "><div id="admin-hub"><a href="#tabs-12"><?php
                             echo Yii::t('admin', 'Hub Services');
-                            ?></a></div></li>  -->
+                            ?></a></div></li>
             </ul>
             <div id="tabs-1">
 
                 <h2 id="admin-support"><?php
-                    echo Yii::t('admin', 'Customer Support');
+                    echo Yii::t('admin', 'Help & Support');
                     ?></h2>
                 <div class="cell span-6">
 				<?php
@@ -166,14 +165,18 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                     echo Yii::t('admin', 'Upward Plus+ Homepage');
                 ?>
                 </div>
-                <div class="cell span-6"><?php
+				
+				<!-- ADD BACK LATER -->
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'File a Support Case'),
                             'https://www.upwardplus.com/comingsoon',array('target'=>'_blank'));
                     ?><br><?php
                     echo Yii::t('admin', 'Coming Soon')
                     ?>
                 </div>
-                <div class="cell span-6"><?php
+				
+				<!-- ADD BACK LATER -->
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Upward Plus+ Community'),
                             'https://upwardplus.com/comingsoon',array('target'=>'_blank'));
                     ?>
@@ -217,7 +220,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                             Yii::t('admin', 'User and admin tutorial videos'));
                     ?>
                 </div>
-                <div class="cell span-6"><?php
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(
                             Yii::t('admin', 'Developer Wiki'),
                             'https://www.upwardplus.com/comingsoon',array('target'=>'_blank'));
@@ -342,9 +345,9 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
             <div id="tabs-4">
 
                 <h2 id="admin-ui-settings"><?php
-                    echo Yii::t('admin', 'User Interface Settings');
+                    echo Yii::t('admin', 'User Interface');
                     ?></h2>
-                <div class="cell span-6">
+                <div class="cell span-6" style="display: none; ">
                     <?php
                     echo CHtml::link(Yii::t('admin',
                                     'Change the Application Name'),
@@ -355,7 +358,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                     ?>
                 </div>
 
-                <div class="cell span-6">
+                <div class="cell span-6" style="display: none; ">
                     <?php
                     echo CHtml::link(Yii::t('admin', 'Set a Default Theme'),
                             array('/admin/setDefaultTheme'));
@@ -382,7 +385,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                     echo Yii::t('admin',
                             'Re-order, add, or remove top bar links');
                     ?></div>
-                <div class="cell span-6"><?php
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Upload Your Logo'),
                             array('/admin/uploadLogo'));
                     ?><br><?php
@@ -395,13 +398,13 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                     ?><br><?php
                     echo Yii::t('admin', 'Add a link to the top bar');
                     ?></div>
-                <div class="cell span-6"><?php
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Edit Global CSS'),
                             array('/admin/editGlobalCss'));
                     ?><br><?php
                     echo Yii::t('admin', 'Edit globally-applied stylesheet');
                     ?></div>
-                <div class="cell span-6"><?php
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Mobile App Form Editor'),
                             array('/admin/editMobileForms'));
                     ?><br><?php
@@ -412,7 +415,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
             <div id="tabs-5">
 
                 <h2 id="admin-lead-capture"><?php
-                    echo Yii::t('admin', 'Web Lead Capture and Routing');
+                    echo Yii::t('admin', 'Web Lead Settings');
                     ?></h2>
                 <div class="cell span-6"><?php
                     echo CHtml::link(Yii::t('marketing', 'Web Lead Form'),
@@ -450,7 +453,9 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                     echo Yii::t('admin',
                             'Change how service cases are distributed');
                     ?></div>
-                <div class="cell span-6"><?php
+					
+				<!-- ADD BACK LATER -->
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Web Tracker Setup'),
                             array('/marketing/marketing/webTracker'));
                     ?><br><?php
@@ -462,7 +467,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
             <div id="tabs-6">
 
                 <h2 id="admin-workflow"><?php
-                    echo Yii::t('admin', 'Workflow & Process Tools');
+                    echo Yii::t('admin', 'Automation Settings');
                     ?></h2>
                 <div class="cell span-6"><?php
                     echo CHtml::link(Yii::t('admin', 'Workflow'),
@@ -511,8 +516,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
             <div id="tabs-7">
 
                 <h2 id="admin-email"><?php
-                    echo Yii::t('admin',
-                            'Email Configuration & 3rd Party Connectors');
+                    echo Yii::t('admin', 'Email Settings');
                     ?></h2>
                 <div class="cell span-6"><?php
                     echo CHtml::link(Yii::t('admin', 'Email Settings'),
@@ -532,28 +536,28 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                     ?><br><?php
                     echo Yii::t('admin', 'Manage your marketing campaigns');
                     ?></div>
-                <div class="cell span-6"><?php
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Email Capture'),
                             array('/admin/emailDropboxSettings'));
                     ?><br><?php
                     echo Yii::t('admin',
                             'Settings for the "email dropbox", which allows Upward Plus+ to receive and record email');
                     ?></div>
-                <div class="cell span-6"><?php
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Convert Template Images'),
                             array('/admin/convertEmailTemplates'));
                     ?><br><?php
                     echo Yii::t('admin',
                             'Fix dead image links in email templates resulting from the 5.2/5.3 media module change');
                     ?></div>
-                <div class="cell span-6"><?php
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Google Integration'),
                             array('/admin/googleIntegration'));
                     ?><br><?php
                     echo Yii::t('admin',
                             'Configure and enable Google integration');
                     ?></div>
-                <div class="cell span-6"><?php
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Twitter Integration'),
                             array('/admin/twitterIntegration'));
                     ?><br><?php
@@ -561,7 +565,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                             'Enter your Twitter app settings for Twitter widget');
                     ?></div>
 
-                <div class="cell span-6"><?php
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Jasper Server Integration'),
                             array('/admin/jasperIntegration'));
                     ?><br><?php
@@ -573,7 +577,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
             <div id="tabs-8">
 
                 <h2 id="admin-import-export"><?php
-                    echo Yii::t('admin', 'Data Import & Export Utilities');
+                    echo Yii::t('admin', 'Data Migration');
                     ?></h2>
                 <div class="cell span-6"><?php
                     echo CHtml::link(Yii::t('admin', 'Import Records'),
@@ -635,7 +639,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
             <div id="tabs-9">
 
                 <h2 id="admin-x2studio"><?php
-                    echo Yii::t('admin', 'Module Customization Tools');
+                    echo Yii::t('admin', 'Customization');
                     ?></h2>
                 <div class="cell span-6"><?php
                     echo CHtml::link(Yii::t('admin', 'Create a Module'),
@@ -709,16 +713,16 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
             <div id="tabs-10">
 
                 <h2 id="admin-settings"><?php
-                    echo Yii::t('admin', 'System Settings');
+                    echo Yii::t('admin', 'Settings');
                     ?></h2>
-                <div class="cell span-6"><?php
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Updater Settings'),
                             array('/admin/updaterSettings'));
                     ?><br><?php
                     echo Yii::t('admin',
                             'Configure automatic updates and registration');
                     ?></div>
-                <div class="cell span-6"><?php
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Update Upward Plus+'),
                             array('/admin/updater'));
                     ?><br><?php
@@ -738,7 +742,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                     echo Yii::t('admin',
                             'Configure global settings for the activity feed');
                     ?></div>
-                <div class="cell span-6">
+                <div class="cell span-6" style="display: none; ">
                     <?php
                     echo CHtml::link(Yii::t('admin', 'Public Info Settings'),
                             array('/admin/publicInfo'));
@@ -747,7 +751,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                             'Miscellaneous settings that control publicly-visible data');
                     ?>
                 </div>
-                <div class="cell span-6">
+                <div class="cell span-6" style="display: none; ">
                     <?php
                     echo CHtml::link(Yii::t('admin', 'Cron Table'),
                             array('/admin/x2CronSettings'));
@@ -756,7 +760,9 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                             'Control the interval at which the application will check for and run scheduled tasks');
                     ?>
                 </div>
-                <div class="cell span-6"><?php
+				
+				<!-- ADD BACK LATER -->
+                <div class="cell span-6" style="display: none; "><?php
                     echo CHtml::link(Yii::t('admin', 'Location Settings'),
                             array('/admin/locationSettings'));
                     ?><br><?php
@@ -770,7 +776,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                 <h2 id="admin-security"><?php
                     echo Yii::t('admin', 'Security Settings');
                     ?></h2>
-                <div class="cell span-6">
+                <div class="cell span-6" style="display: none; ">
                     <?php
                     echo CHtml::link(Yii::t('admin', 'Lock or Unlock Upward Plus+'),
                             array('/admin/lockApp'));
@@ -779,7 +785,7 @@ $failedLoginsDataProvider = new CActiveDataProvider('FailedLogins',
                             'Set the application into maintenance mode, where only administrators can access it');
                     ?>
                 </div>
-                <div class="cell span-6">
+                <div class="cell span-6" style="display: none; ">
                     <?php
                     echo CHtml::link(Yii::t('admin', 'REST API'),
                             array('/admin/api2Settings'));

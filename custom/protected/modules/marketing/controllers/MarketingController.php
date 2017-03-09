@@ -997,29 +997,39 @@ class MarketingController extends x2base {
                 'label' => Yii::t('marketing', 'Web Lead Form'),
                 'url' => array('webleadForm')
             ),
+			/*
+			***** ADD BACK LATER *****
             array(
                 'name'=>'webtracker',
                 'label' => Yii::t('marketing', 'Web Tracker'),
                 'url' => array('webTracker'),
                 'visible' => (Yii::app()->contEd('pro'))
             ),
-        
+			*/
+			
+			/*
+			***** ADD BACK LATER *****
             array(
                 'name'=>'anoncontacts',
                 'label' => Yii::t('marketing', 'Anonymous Contacts'),
                 'url'=>array('anonContactIndex'),
                 'visible' => $marketingAdmin && Yii::app()->contEd('pla')
             ),
+			*/
+			
+			/*
+			***** ADD BACK LATER *****
+			
             array(
                 'name'=>'fingerprints',
                 'label' => Yii::t('marketing', 'Fingerprints'),
                 'url' => array('fingerprintIndex'),
                 'visible' => $marketingAdmin && Yii::app()->contEd('pla')
-            ),
+            ), */
         
             array(
                 'name'=>'x2flow',
-                'label' => Yii::t('app', 'Workflow'),
+                'label' => Yii::t('app', 'Workflows'),
                 'url' => array('/studio/flowIndex'),
                 'visible' => (Yii::app()->contEd('pro'))
             ),

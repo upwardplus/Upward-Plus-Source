@@ -4779,7 +4779,7 @@ class AdminController extends X2Controller {
                 Yii::app()->user->setFlash(
                     'error',
                     Yii::t('admin', 'It appears that you are attempting to upload a package. '.
-                        'Please use X2Packager to import the package ').
+                        'Please use Packager to import the package ').
                         CHtml::link(Yii::t('admin','here'), array('admin/packager')).'.'
                 );
                 $this->redirect('importModule');
